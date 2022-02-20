@@ -1,0 +1,12 @@
+/* Font  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+/* Common Fonts  */
+body{
+    font-family: 'Poppins', sans-serif;
+}
+/* Styles  */
+input{
+    background-color: lightgray;
+    padding: 4px;
+}
+
