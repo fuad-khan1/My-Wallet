@@ -27,14 +27,14 @@
           </div>
           <div class="col text-center">
             <h4> Income</h4>
-            Income: <input class="income" type="text">
+            Income: <input id="input-income" class="income" type="text">
             <h4 class="mt-2">Expenses</h4>
-            Food: <input class="mb-2" type="text"> <br>
-            Rent: <input class="mb-2" type="text"><br>
-            Clothes: <input type="text"><br>
-            <button class="m-4 px-3 bg-primary fw-bold text-white ">Calculate</button>
-            <h4>Total Expenses:<span> 0</span></h4>
-            <h4>Balance:<span> 200</span></h4>
+            Food: <input id="input-food" class="mb-2" type="text"> <br>
+            Rent: <input id="input-rent" class="mb-2" type="text"><br>
+            Clothes: <input id="input-clothes" type="text"><br>
+            <button onclick="calculateButton()" id="btn-calculate" class="m-4 px-3 bg-primary fw-bold text-white ">Calculate</button>
+            <h4>Total Expenses: <span id="total-expense"> 0</span></h4>
+            <h4>Balance: <span id="balance-Total"> 200</span></h4>
             Save: <input type="text" name="" id="">
             %<button class="m-4 px-3 bg-primary fw-bold text-white ">Save</button>
            <h4>Saving Amount:<span>0 </span></h4>
