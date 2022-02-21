@@ -7,18 +7,18 @@ const displayExpense = document.getElementById("total-expense");
 let balanceTotal = document.getElementById("balance-Total");
 
 function calculateButton() {
-  /* if (foodInput.value >= 0 && rentInput.value >= 0 && clothesInput.value >= 0 && foodInput.value<incomeInput.value && rentInput.value<incomeInput.value && clothesInput.value<incomeInput.value) { */
-    const totalExpenses =
-      Number(foodInput.value) +
-      Number(rentInput.value) +
-      Number(clothesInput.value);
+  const totalExpenses =
+    Number(foodInput.value) +
+    Number(rentInput.value) +
+    Number(clothesInput.value);
+  if (totalExpenses < parseInt(incomeInput.value)) {
     displayExpense.innerText = totalExpenses;
     balanceTotal.innerText = Number(incomeInput.value) - totalExpenses;
-//   } else {
-//     const errorMsg = document.createElement("span");
-//     errorMsg.innerText = "<Invalid input>";
-//     document.getElementById("total-expense").appendChild(errorMsg);
-//   }
+  } else {
+    const error1 = document.createElement("p");
+    error1.innerText = "Invalid input!!!!!";
+    document.getElementById("total-expense").appendChild(error1);
+  }
 }
 
 //Save Button calculation ****************************************
@@ -27,6 +27,12 @@ const savingAmount = document.getElementById("saving-amount");
 const remainingBalance = document.getElementById("remaining-balance");
 
 function saveButton() {
-  savingAmount.innerText = (Number(saveInput.value) / 100) * incomeInput.value;
-  remainingBalance.innerText = balanceTotal.innerText - savingAmount.innerText;
-}
+    savingAmount.innerText =
+      (Number(saveInput.value) / 100) * incomeInput.value;
+    remainingBalance.innerText =
+      balanceTotal.innerText - savingAmount.innerText;
+    const error2 = document.createElement("p");
+    error2.innerText = "Invalid input!";
+    document.body.appendChild(error2);
+  }
+
